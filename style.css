@@ -231,6 +231,10 @@ input::placeholder {
    .degree {
       margin-left: 0;
    }
+   
+   .logo h4 {
+      font-size: 14px;
+   }
 }
 
 @media (max-width: 469px) {
@@ -271,6 +275,10 @@ input::placeholder {
 
    .parent {
       margin-left: 20px;
+   }
+   
+   .logo h4 {
+      margin-left: 40px;
    }
 }
 
