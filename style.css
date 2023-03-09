@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: url(background.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   font-family: 'Lato', sans-serif;
+   color: #fff;
+}
+
+.container {
+   width: 100vw;
+   display: grid;
+   grid-template-columns: 61% 39%;
+}
+
+.right-side {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   padding: 100px 0;
+}
+
+.left-side {
+   background: rgba(92, 92, 92, .3);
+   backdrop-filter: blur(30px);
+}
+
+.item {
+   min-height: 100vh;
+}
+
+.logo,
+.content-box {
+   width: 100%;
+}
+
+.logo h4 {
+   margin-left: 60px;
+   text-transform: capitalize;
+}
+
+svg {
+   width: 40px;
+   color: #fff;
+   opacity: .7;
+   margin-bottom: 10px;
+}
+
+.content-box {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.content-box h1 {
+   font-size: 8em;
+   letter-spacing: 5px;
+}
+
+.content-box span {
+   font-size: 30px;
+   position: relative;
+   bottom: 70px;
+}
+
+.degree,
+.city,
+.svg-icon {
+   margin-left: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.svg-icon {
+   justify-content: flex-end;
+   height: 80px;
+}
+
+.city h2 {
+   font-size: 55px;
+   letter-spacing: 2px;
+   font-weight: 100;
+}
+
+.city time {
+   font-size: 14px;
+}
+
+.parent {
+   margin-left: 50px;
+   display: grid;
+   grid-auto-rows: 14% 2fr 2fr;
+   height: 100%;
+}
+
+.input-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.input-box svg {
+   width: 30px;
+}
+
+.input-box .svg-icon-2 {
+   background: rgb(127, 161, 149, .7);
+   height: 100%;
+   width: 27%;
+   display: grid;
+   place-items: center;
+   cursor: pointer;
+   transition: .3s;
+}
+
+.input-box .svg-icon-2:hover {
+   background: rgb(130, 161, 149);
+}
+
+.input-box input {
+   width: 60%;
+   border: 2px solid rgb(255, 255, 255, .5);
+   background: none;
+   padding: 10px 0;
+   color: #fff;
+   font-size: 15.5px;
+   outline: none;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+}
+
+input::placeholder {
+   color: #fff;
+   opacity: .5;
+}
+
+.locations {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   position: relative;
+}
+
+.locations span {
+   margin-bottom: 35px;
+   cursor: pointer;
+   transition: .2s;
+}
+
+.locations span:hover {
+   opacity: 1;
+}
+
+.locations::before {
+   content: '';
+   position: absolute;
+   background: rgb(255, 255, 255, .5);
+   width: 90%;
+   height: 2px;
+   bottom: 35px;
+}
+
+.weather-details {
+   position: relative;
+   margin-bottom: 50px;
+}
+
+.weather-details .details-parent {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 220px;
+   width: 90%;
+   position: relative;
+}
+
+.details-parent .details {
+   display: flex;
+   justify-content: space-between;
+}
+
+.details-parent .details span {
+   opacity: 1;
+}
+
+.details-parent .details p,
+.locations span {
+   opacity: .7;
+}
+
+.weather-details::after {
+   content: '';
+   position: absolute;
+   background: rgb(255, 255, 255, .5);
+   width: 90%;
+   height: 2px;
+   bottom: 0;
+}
+
+@media only screen and (max-width: 1060px) {
+   .parent {
+      grid-auto-rows: 10% 2fr 2fr;
+   }
+}
+
+@media (max-width: 838px) {
+   .container {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 2fr;
+      width: 100%;
+      background: url(background.jpg);
+   }
+}
+
+@media (max-width: 537px) {
+   .degree {
+      margin-left: 0;
+   }
+}
+
+@media (max-width: 469px) {
+   .content-box {
+      display: grid;
+      grid-template-areas:
+         'degree . .'
+         'city svg .';
+   }
+
+   .degree {
+      grid-area: degree;
+   }
+
+   .city {
+      grid-area: city;
+   }
+
+   .svg-icon {
+      grid-area: svg;
+   }
+
+   .svg-icon,
+   .city {
+      margin: 0;
+   }
+}
+
+@media (max-width: 430px) {
+   .content-box h1 {
+      font-size: 6em;
+   }
+
+   .content-box span {
+      font-size: 20px;
+      bottom: 55px;
+   }
+
+   .parent {
+      margin-left: 20px;
+   }
+}
+
+@media (max-width: 355px) {
+   .logo h4 {
+      margin-left: 30px;
+   }
+}
